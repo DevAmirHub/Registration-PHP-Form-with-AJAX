@@ -222,8 +222,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 This project is open source and available under the [MIT License](LICENSE).
 
 ## Author
-
-**امیر فلاحی** (Amir Fallahi)
+(Amir Fallahi)
 
 - GitHub: [@DevAmirHub](https://github.com/DevAmirHub)
 - Email: devamir99@gmail.com

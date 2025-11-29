@@ -1,0 +1,357 @@
+@font-face {
+    font-family: 'IRANSans';
+    src: url('../font/A-Iranian-Sans/Iranian\ Sans.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Dark Mode Base Styles */
+:root {
+    --dark-bg: #0a0e27;
+    --dark-surface: #1a1f3a;
+    --dark-card: rgba(26, 31, 58, 0.7);
+    --dark-text: #e0e0e0;
+    --dark-text-secondary: #b0b0b0;
+    --orange-primary: #ff6b35;
+    --orange-hover: #ff8c5a;
+    --orange-dark: #e55a2b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'IRANSans', sans-serif;
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1629 100%) !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+    width: 100% !important;
+    height: 100% !important;
+    color: var(--dark-text) !important;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Animated Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 107, 53, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(255, 107, 53, 0.06) 0%, transparent 50%);
+    z-index: -1;
+    animation: backgroundShift 20s ease-in-out infinite;
+}
+
+@keyframes backgroundShift {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+/* Glassmorphism Card */
+.glass-card {
+    background: rgba(26, 31, 58, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 
+        0 8px 32px 0 rgba(0, 0, 0, 0.37),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 12px 40px 0 rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 107, 53, 0.3);
+}
+
+/* Card Header with Glassmorphism */
+.card-header {
+    background: rgba(255, 107, 53, 0.15) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 20px 20px 0 0 !important;
+    padding: 1.25rem 1.5rem !important;
+}
+
+.card-header h1 {
+    font-size: 1.5rem !important;
+    margin: 0 !important;
+}
+
+
+/* Card Body */
+.card-body {
+    background: transparent;
+    padding: 1.25rem 1.5rem !important;
+}
+
+/* Form Controls */
+.form-control,
+.form-control-lg {
+    direction: rtl;
+    text-align: right;
+    font-size: 15px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 10px !important;
+    color: var(--dark-text) !important;
+    padding: 8px 14px !important;
+    margin-bottom: 0 !important;
+    height: auto !important;
+    line-height: 1.5 !important;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: var(--orange-primary) !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25) !important;
+    color: var(--dark-text) !important;
+}
+
+.form-control::placeholder {
+    color: var(--dark-text-secondary) !important;
+    opacity: 0.6;
+}
+
+/* Form Labels */
+.form-label {
+    color: var(--dark-text) !important;
+    font-weight: 500;
+    margin-bottom: 0.4rem !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Reduce spacing between form fields */
+.mb-3 {
+    margin-bottom: 0.6rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 0.75rem !important;
+}
+
+/* Form row spacing */
+.row.mb-3 {
+    margin-bottom: 0.75rem !important;
+}
+
+.row.mb-3 > div {
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .row.mb-3 > div {
+        margin-bottom: 0;
+    }
+}
+
+/* Form group spacing */
+#ajax-form > .mb-3:first-child {
+    margin-top: 0;
+}
+
+#ajax-form > .mb-4:last-of-type {
+    margin-bottom: 1rem;
+}
+
+.form-label i {
+    color: var(--orange-primary);
+    font-size: 1.1rem;
+}
+
+/* Orange Button Styles */
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:active {
+    background: linear-gradient(135deg, var(--orange-primary) 0%, var(--orange-dark) 100%) !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 14px 28px !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    color: #fff !important;
+    box-shadow: 
+        0 4px 15px rgba(255, 107, 53, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--orange-hover) 0%, var(--orange-primary) 100%) !important;
+    transform: translateY(-2px);
+    box-shadow: 
+        0 6px 20px rgba(255, 107, 53, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 
+        0 2px 10px rgba(255, 107, 53, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* File Input */
+.form-control[type="file"] {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: var(--dark-text) !important;
+    cursor: pointer;
+}
+
+.form-control[type="file"]::-webkit-file-upload-button {
+    background: var(--orange-primary);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.form-control[type="file"]::-webkit-file-upload-button:hover {
+    background: var(--orange-hover);
+}
+
+.form-text {
+    color: var(--dark-text-secondary) !important;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+/* Success Page Styles */
+.text-success {
+    color: var(--orange-primary) !important;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Container Adjustments */
+.container {
+    position: relative;
+    z-index: 1;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Ensure form is properly positioned on dark background */
+.container .row {
+    /* min-height: calc(100vh - 6rem); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Remove Bootstrap's bg-light and ensure dark background */
+.bg-light,
+body.bg-light,
+body {
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1629 100%) !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+    color: var(--dark-text) !important;
+}
+
+/* Ensure html also has dark background */
+html {
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1629 100%) !important;
+    min-height: 100vh !important;
+}
+
+/* Spinner for Loading State */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.15em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .glass-card {
+        border-radius: 15px;
+        margin: 1rem;
+    }
+    
+    .card-header,
+    .card-body {
+        padding: 1.5rem !important;
+    }
+    
+    .btn-primary {
+        padding: 12px 24px !important;
+        font-size: 1rem !important;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-surface);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--orange-primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--orange-hover);
+}

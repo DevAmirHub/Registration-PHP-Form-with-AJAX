@@ -1,0 +1,81 @@
+# Dependencies
+node_modules/
+vendor/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+error_log
+access_log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.cache/
+
+# Uploaded files (if storing in project)
+uploads/
+files/
+storage/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Package files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# PHP specific
+composer.phar
+composer.lock
+
+# Optional: Ignore assets if you want to copy them manually
+# Uncomment if you don't want to commit copied assets
+# assets/css/bootstrap.*
+# assets/js/bootstrap.*
+# assets/css/sweetalert2.*
+# assets/js/sweetalert2.*
+# assets/js/jquery.*
+

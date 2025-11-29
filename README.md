@@ -23,7 +23,7 @@ A modern, responsive registration form built with PHP, Bootstrap 5, and AJAX. Fe
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/practice.git
+   git clone https://github.com/DevAmirHub/practice.git
    cd practice
    ```
 
@@ -223,7 +223,12 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Author
 
-Your Name - [@yourusername](https://github.com/yourusername)
+**امیر فلاحی** (Amir Fallahi)
+
+- GitHub: [@DevAmirHub](https://github.com/DevAmirHub)
+- Email: devamir99@gmail.com
+
+I create web products with an emphasis on clean architecture, practical solutions, and long-term maintainability.
 
 ## Acknowledgments
 
@@ -231,11 +236,17 @@ Your Name - [@yourusername](https://github.com/yourusername)
 - [SweetAlert2](https://sweetalert2.github.io/) - Beautiful alerts
 - [Bootstrap Icons](https://icons.getbootstrap.com/) - Icon library
 
+## Topics
+
+This project uses the following technologies and concepts:
+
+`php` `ajax` `registration-form` `bootstrap` `rtl` `persian` `dark-mode` `glassmorphism` `sweetalert2` `form-validation` `javascript` `jquery` `responsive-design` `file-upload` `modern-ui` `bootstrap-5`
+
 ## Support
 
-If you have any questions or issues, please open an issue on GitHub.
+If you have any questions or issues, please open an issue on [GitHub](https://github.com/DevAmirHub/practice/issues).
 
 ---
 
-Made with ❤️ using PHP and Bootstrap
+Made with amir falahi 
 
